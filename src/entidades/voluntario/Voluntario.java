@@ -1,4 +1,4 @@
-package entidades;
+package entidades.voluntario;
 
 import java.util.Objects;
 

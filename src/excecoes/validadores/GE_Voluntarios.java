@@ -2,7 +2,7 @@ package excecoes.validadores;
 
 import java.util.HashMap;
 
-import entidades.Voluntario;
+import entidades.voluntario.Voluntario;
 import excecoes.classes.RegistroDuplicadoException;
 
 public class GE_Voluntarios extends GeradorExcecoes {

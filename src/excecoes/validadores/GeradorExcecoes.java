@@ -6,8 +6,8 @@ import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import entidades.Voluntario;
 import entidades.acoes.Acao;
+import entidades.voluntario.Voluntario;
 import excecoes.classes.AcaoLotadaException;
 import excecoes.classes.DataInvalidaException;
 import excecoes.classes.DescricaoInvalidaException;

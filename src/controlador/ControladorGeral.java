@@ -5,11 +5,11 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
-import entidades.Voluntario;
 import entidades.acoes.Acao;
 import entidades.acoes.Multirao;
 import entidades.acoes.Oficina;
 import entidades.acoes.Plantio;
+import entidades.voluntario.Voluntario;
 import excecoes.validadores.GE_Acoes;
 import excecoes.validadores.GE_Voluntarios;
 
