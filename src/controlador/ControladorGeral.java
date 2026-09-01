@@ -30,10 +30,19 @@ public class ControladorGeral {
 		this.idAtual = 0;
 	}
 	
+	public HashMap<String, Voluntario> getVoluntarios() {return voluntarios;}
+	public HashMap<Integer, Acao> getAcoes() {return acoes;}
+	public HashMap<Integer, ArrayList<String>> getVoluntariosPorAcao() {return voluntariosPorAcao;}
+
 	public boolean cadastrarVoluntario(String email, String nome, String matricula) {
-		gev.validaCadastroVoluntario(email, nome, matricula, voluntarios.containsKey(email));
-				
-		return true;
+	    try {
+	        gev.validaCadastroVoluntario(email, nome, matricula, voluntarios.containsKey(email));
+	    } catch (RuntimeException e) {
+	        return false;
+	    }
+
+	    voluntarios.put(email, new Voluntario(nome, email, matricula));
+	    return true;
 	}
 	
 	public String exibirVoluntario(String email) {
