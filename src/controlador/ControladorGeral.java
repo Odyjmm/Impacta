@@ -41,7 +41,7 @@ public class ControladorGeral {
 	        return false;
 	    }
 
-	    voluntarios.put(email, new Voluntario(nome, email, matricula));
+	    voluntarios.put(email, new Voluntario(email, nome, matricula));
 	    return true;
 	}
 	
@@ -105,7 +105,7 @@ public class ControladorGeral {
 		gev.validaVoluntarioEhCadastrado(voluntarios, emailVoluntario);
 		gea.validaAcaoEhCadastrada(acoes, idAcao);
 		
-		gea.validaInscricaoVoluntario(voluntariosPorAcao.get(idAcao), emailVoluntario, acoes.get(idAtual).getCapacidaMaxima(), voluntariosPorAcao.get(idAcao).size());
+		gea.validaInscricaoVoluntario(voluntariosPorAcao.get(idAcao), emailVoluntario, acoes.get(idAcao).getCapacidaMaxima(), voluntariosPorAcao.get(idAcao).size());
 		
 		voluntariosPorAcao.get(idAcao).add(emailVoluntario);
 		

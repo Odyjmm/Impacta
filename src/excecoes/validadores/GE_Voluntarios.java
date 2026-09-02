@@ -7,12 +7,12 @@ import excecoes.classes.RegistroDuplicadoException;
 
 public class GE_Voluntarios extends GeradorExcecoes {
 	public void validaCadastroVoluntario(String email, String nome, String matricula, boolean contains) {
-		super.verificadorEmailInválido(email, "Erro ao cadastrar novo voluntário: O campo email não pode ser vazio ou nulo");
+		super.verificadorStringInvalida(email, "Erro ao cadastrar novo voluntário: O campo email não pode ser vazio ou nulo");
 		if (contains) throw new RegistroDuplicadoException("Erro ao cadastrar novo voluntário: O campo email contém dados já previamente cadastrados");
 		
-		super.verificadorNomeInvalido(nome, "Erro ao cadastrar novo voluntário: O campo nome não pode ser vazio ou nulo");
+		super.verificadorStringInvalida(nome, "Erro ao cadastrar novo voluntário: O campo nome não pode ser vazio ou nulo");
 		
-		super.verificadorMatriculaInvalida(matricula, "Erro ao cadastrar novo voluntário: O campo matrícula não pode ser vazio ou nulo");
+		super.verificadorStringInvalida(matricula, "Erro ao cadastrar novo voluntário: O campo matrícula não pode ser vazio ou nulo");
 	}
 	
 	public void validaVoluntarioEhCadastrado(HashMap<String, Voluntario> map, String email) {
